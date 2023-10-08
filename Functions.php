@@ -17,10 +17,15 @@ function add_widget_Support() {
 }
 // Hook the widget initiation and run our function
 add_action( 'widgets_init', 'add_Widget_Support' );
+
 // Register a new navigation menu
-function add_Main_Nav() {
-    register_nav_menu('header-menu',__( 'Header Menu' ));
-  }
-  // Hook to the init action hook, run our navigation menu function
-  add_action( 'init', 'add_Main_Nav' );
+function register_my_menus() {
+    register_nav_menus(
+        array(
+            'header' => __( 'Header Menu' ),
+            'other' => __( 'Other Menu' )
+        )
+    );
+}
+add_action( 'init', 'register_my_menus' );
 ?>
