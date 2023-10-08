@@ -14,7 +14,7 @@
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css">
-        
+
         <title><?php bloginfo('name'); ?></title>
 
         <!-- Header Wordpress -->
@@ -31,7 +31,8 @@
                     <li class="menu-item"><a href="#quem somos">Quem Somos</a></li>
                     <li class="menu-item"><a href="#areas de atuacao">Áreas de atuação</a></li>
                     <li class="menu-item"><a href="#depoimentos">Depoimentos</a></li>
-                    <li class="menu-item"><a href="#contato">Contato</a></li>
+                    <li class="menu-item"><a href="/contato">Contato</a></li>
+                    <li class="menu-item"><a href="/blog">Blog</a></li>
                 </ul>
 
                 <button id="botaoMenu" class="menu-botao"><i class="ph ph-list"></i></button>
