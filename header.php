@@ -27,10 +27,10 @@
                 <a href="/"><img class="menu-logo" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.webp" alt="Logo dra. Gleice Rodrigues"></a>
 
                 <ul id="menuLista" class="menu-lista up">
-                    <li class="menu-item"><a href="<?php echo (is_home()) ? "#inicio" : "/" ; ?>">Inicio</a></li>
-                    <li class="menu-item"><a href="<?php echo (is_home()) ? "#quem somos" : "/" ; ?>">Quem Somos</a></li>
-                    <li class="menu-item"><a href="<?php echo (is_home()) ? "#area de atuacao" : "/" ; ?>">Áreas de atuação</a></li>
-                    <li class="menu-item"><a href="<?php echo (is_home()) ? "#depoimentos" : "/" ; ?>">Depoimentos</a></li>
+                    <li class="menu-item"><a href="<?php (is_home()) ? "#inicio" : "/" ; ?>">Inicio</a></li>
+                    <li class="menu-item"><a href="<?php (is_home()) ? "#quem somos" : "/" ; ?>">Quem Somos</a></li>
+                    <li class="menu-item"><a href="<?php (is_home()) ? "#area de atuacao" : "/" ; ?>">Áreas de atuação</a></li>
+                    <li class="menu-item"><a href="<?php (is_home()) ? "#depoimentos" : "/" ; ?>">Depoimentos</a></li>
                     <li class="menu-item"><a href="/contato">Contato</a></li>
                     <li class="menu-item"><a href="/blog">Blog</a></li>
                 </ul>
