@@ -1,4 +1,4 @@
-    <?php get_header(); ?>
+    
 
     <section id="inicio" class="inicio">
         <div class="inicio-imagem"></div>
