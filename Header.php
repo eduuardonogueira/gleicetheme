@@ -14,7 +14,8 @@
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css">
-        <title><?php get_bloginfo('name'); ?></title>
+        
+        <title><?php bloginfo('name'); ?></title>
 
         <!-- Header Wordpress -->
         <?php wp_head(); ?>
