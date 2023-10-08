@@ -19,7 +19,7 @@
 <body>
     <header class="menu">
         <nav class="menu-nav">
-            <a href="#"><img class="menu-logo" src="./assets/img/logo.webp" alt="Logo dra. Gleice Rodrigues"></a>
+            <a href="#"><img class="menu-logo" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.webp" alt="Logo dra. Gleice Rodrigues"></a>
 
             <ul id="menuLista" class="menu-lista up">
                 <li class="menu-item"><a href="#inicio">Inicio</a></li>
@@ -56,8 +56,8 @@
                     pautado na honestidade e no respeito.
                 </p>
             </div>
-            <img class="sobre-imagem" src="./assets/img/sobre-imagem.webp" alt="Advogado assinando um contrato">
-            <img class="sobre-imagem_desktop" src="./assets/img/sobre-imagem_desktop.webp" alt="balança com um livro no fundo">
+            <img class="sobre-imagem" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/sobre-imagem.webp" alt="Advogado assinando um contrato">
+            <img class="sobre-imagem_desktop" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/sobre-imagem_desktop.webp" alt="balança com um livro no fundo">
             <div class="sobre-box">
                 <p>Atenção personalizada e dedicada</p>
             </div>
@@ -76,7 +76,7 @@
     
             <ul class="atuacao-cards">
                 <li class="card">
-                    <img class="card-imagem" src="/assets/img/direito-civil.webp" alt="ilutração de um homem com capacete">
+                    <img class="card-imagem" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/direito-civil.webp" alt="ilutração de um homem com capacete">
                     <h2 class="card-titulo">
                         Direito Civil
                     </h2>
@@ -85,7 +85,7 @@
                     </p>
                 </li>
                 <li class="card">
-                    <img class="card-imagem" src="/assets/img/direito-previdenciario.webp" alt="ilutração de um homem com capacete">
+                    <img class="card-imagem" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/direito-previdenciario.webp" alt="ilutração de um homem com capacete">
                     <h2 class="card-titulo">
                         Direito Previdenciário
                     </h2>
@@ -94,7 +94,7 @@
                     </p>
                 </li>
                 <li class="card">
-                    <img class="card-imagem" src="/assets/img/direito-trabalhista.webp" alt="ilutração de um homem com capacete">
+                    <img class="card-imagem" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/direito-trabalhista.webp" alt="ilutração de um homem com capacete">
                     <h2 class="card-titulo">
                         Direito Trabalhista
                     </h2>
