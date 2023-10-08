@@ -5,13 +5,13 @@
       <article class="article-loop">
         <header>
           <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-          /*By: <?php the_author(); ?>*/
+          By: <?php the_author(); ?>
         </header>
         <?php the_excerpt(); ?>
       </article>
 <?php endwhile; else : ?>
       <article>
-        <p>Sorry, no posts were found!</p>
+        <p>Desculpe nenhum post foi encontrado</p>
       </article>
 <?php endif; ?>
   </section><?php get_sidebar(); ?>

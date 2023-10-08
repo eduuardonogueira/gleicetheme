@@ -50,11 +50,11 @@ a {
 }
 
 .content-area {
-  display: inline-block;
+  width: 100%;
 }
 
 .content-thin {
-    width: 70%;
+    max-width: 75%;
 }
 
 .content-full-width {
