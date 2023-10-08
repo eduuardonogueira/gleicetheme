@@ -1,4 +1,4 @@
-<footer class="footer">
+    <footer class="footer">
         <div class="container-box">
             <div class="footer-contato">
                 <a class="contato-info" href="" target="_blank">
@@ -49,5 +49,5 @@
     <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/assets/javascript/script.js"></script>
 
     <?php wp_footer(); ?>
-</body>
+  </body>
 </html>
