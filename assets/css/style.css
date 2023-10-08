@@ -1,0 +1,767 @@
+body {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-family: 'Fira Code', monospace !important;
+    font-family: 'Libre Baskerville', serif !important;
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
+
+section h1 {
+    margin: unset;
+}
+
+:root {
+    --black-bean: #3E0A03;
+    --garnet: #6C3833;
+    --principal: #996562;
+    --logo-letra: #d7bfb8;
+    --misty-rose: #EADAD7;
+    --robin-eggblue: #00CECB;
+    --gray: #666;
+    --gray-100: #EDEDED;
+    --black: #000;
+    --white: #fff;
+}
+
+.botao-wpp {
+    position: fixed;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+    background: #34af23;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 68px;
+    transition: all 0.3s ease-out 0s;
+    text-decoration: none;
+    > i {
+        font-size: 2.2rem;
+        color: #fff;
+    }
+}
+
+.container-box {
+    padding: 108px 8vw 56px;
+}
+
+/* ########################################## Menu ####################################################*/
+
+.menu {
+    position: fixed;
+    background: #996562;
+    z-index: 100;
+    padding: 12px 8vw;
+    width: 100%;
+}
+
+.menu-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-botao {
+    background: none;
+    border: none;
+    color: var(--logo-letra);
+    font-size: 1.5rem;
+}
+
+.menu-logo {
+    height: 50px;
+}
+
+.down {
+    height: 30% !important;
+    opacity: 1 !important;
+    border-bottom: var(--principal) 3px solid;
+    padding-block: 24px;
+}
+
+.menu-lista {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70vw;
+    left: 15vw;
+    background: var(--white);
+    box-sizing: border-box;
+    top: 77px;
+    z-index: 100;
+    overflow: hidden;
+    padding-inline: 24px;
+    height: 0px;
+    transition: 0.4s ease ;
+}
+
+.menu-item  {
+    font-size: 14px;
+    transition: 0.3s ease;
+    
+    > a {
+        display: block;
+        color: var(--gray);
+        text-decoration: none;
+    }
+}
+
+.menu-item :hover{
+    cursor: pointer;
+    color: var(--robin-eggblue) !important;
+}
+
+
+/* ########################################## Inicio ####################################################*/
+
+.inicio {
+    height: 477px;
+    background: transparent;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-top: 77px;
+}
+
+.inicio-imagem {
+    position: fixed;
+    top: 76px;
+    width: 100%;
+    height: 400px;
+    background: url("../img/background-inicio.webp") no-repeat center;
+    background-size: cover;
+}
+
+.cont {
+    z-index: 1;
+}
+
+.inicio-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 8vw;
+    gap: 8px;
+}
+
+.inicio-titulo {
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--black-bean);
+}
+
+.inicio-linha {
+    height: 10px;
+    background: var(--garnet);
+    width: 2px;
+    opacity: 1;
+    margin: 0px;
+}
+
+.inicio-texto {
+    font-size: 16px;
+    color: var(--garnet);
+}
+
+
+
+/* ########################################## Sobre ####################################################*/
+
+.sobre {
+    background: #fff;
+    z-index: 2;
+
+    > .container-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+    }
+}
+
+.sobre-titulo, .atuacao-titulo, .carousel-titulo, .contato-titulo {
+    font-size: 30px;
+    line-height: 38px;
+    color: var(--black-bean);
+    text-align: center;
+}
+
+.sobre-texto, .atuacao-texto {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--garnet);
+    text-align: justify;
+}
+
+.sobre-imagem {
+    margin-top: 32px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.sobre-imagem_desktop {
+    display: none;
+}
+
+.sobre-box {
+    margin-top: 32px;
+    background: var(--garnet);
+    padding: 24px;
+    width: 100%;
+    max-width: 500px;
+    
+    > p {
+        text-align: center;
+        line-height: 24px;
+        color: var(--white);
+        font-weight: 700;
+    }
+}
+
+
+/* ########################################## Atuação ####################################################*/
+
+.atuacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    background: #f0e9e9;
+    z-index: 1;
+}
+
+.atuacao-cards {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 48px 24px;
+    border-radius: 7px;
+    gap: 12px;
+}
+
+.card-imagem {
+    width: 30%;
+}
+
+.card-titulo {
+    font-size: 20px;
+    color: var(--black-bean);
+    text-align: center;
+    font-weight: 700;
+}
+
+.card-texto {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 20px;
+    text-align: start;
+    max-width: 400px;
+}
+
+
+/* ########################################## Depoimentos ####################################################*/
+
+.carousel-bg {
+    position: absolute;
+    background: url("../img/background-feedback.webp") center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 0;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    color: #fff !important;
+    > i {
+        font-size: 2rem;
+    }
+} 
+
+.carousel-conteudo {
+    position: relative;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 65%;
+    margin: auto;
+    z-index: 10;
+}
+
+.comentario {
+    color: var(--white);
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+    z-index: 10;
+
+    > i {
+        font-size: 28px;
+        color: var(--principal);
+    }
+}
+
+.autor {
+    align-self: start;
+    color: #996562;
+    font-weight: 700;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.carousel h1 {
+    margin: unset;
+}
+
+.carousel-titulo {
+    position: relative;
+    padding: 84px 8vw 0px;
+    color: var(--white);
+    z-index: 10;
+}
+
+
+/* ########################################## Contato ####################################################*/
+.contato {
+    background: var(--white);
+    > .container-box {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contato-titulo {
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.form-text {
+    margin-top: unset;
+}
+
+.form-input, .form-select, .form-text {
+    border: none;
+    border-radius: 7px;
+    background: var(--gray-100);
+    color: var(--gray);
+    padding: 16px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.form-input:focus, .form-select:focus, .form-text:focus {
+    outline: solid 1px var(--principal);
+}
+
+.select-box {
+    position: relative;
+    width: 100%;
+    > i {
+        position: absolute;
+        right: 16px;
+        top: 18px;
+        z-index: 2;
+    }
+}
+
+.form-botao {
+    padding: 16px;
+    width: 50%;
+    align-self: flex-end;
+    border: none;
+    background: var(--black-bean);
+    color: var(--white);
+    border-radius: 7px;
+    margin-top: 4px;
+}
+
+.contato-mapa {
+    width: 100%;
+}
+
+
+/* ########################################## Footer ####################################################*/
+
+.footer {
+    position: relative;
+    background: #1d0502;
+    z-index: 2;
+
+    > .container-box {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+        padding: 40px 8vw;
+    }
+}
+
+.footer-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+}
+
+.contato-info, .footer-local, .footer-horario div{
+    font-size: 15px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 4px;
+    color: var(--white);
+
+    > i {
+        font-size: 1.2rem;
+    }
+}
+
+.footer-local, .footer-horario div {
+    align-items: start;
+
+    > i {
+        margin-top: 2px;
+    }
+}
+
+.footer-horario {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 15px;
+
+    > p {
+        font-size: 15px;
+        line-height: 22px;
+        color: var(--white);
+    }
+}
+
+.copyright {
+    color: var(--white);
+    font-size: 12px;
+    line-height: 22px;
+    align-self: center;
+}
+
+@media screen and (min-width: 600px) {
+    .carousel-conteudo {
+        height: 600px;
+    }
+
+    .contato-titulo {
+        text-align: start;
+    }
+
+    .footer .container-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr auto;
+        grid-template-areas: "contato local"
+                             "horario local"
+                             "copy copy";
+    }
+
+    .copyright {
+        grid-area: copy;
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .inicio {
+        height: 577px;
+    }
+
+    .inicio-imagem {
+        height: 500px;
+    }
+
+    .inicio-titulo {
+        font-size: 30px;
+    }
+
+    .inicio-texto {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .inicio-linha {
+        height: 14px;
+    }
+
+    .atuacao-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: calc(50% - 12px);
+        box-sizing: border-box;
+    }
+
+    .contato-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+
+    .form-input:nth-child(2), .form-input:nth-child(3) {
+        width: calc(50% - 4px);
+    } 
+}
+
+@media screen and (min-width: 880px) {
+    .inicio {
+        height: 677px;
+    }
+
+    .inicio-imagem {
+        height: 600px;
+    }
+
+    .inicio-titulo {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .inicio-texto {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .inicio-linha {
+        height: 14px;
+        width: 3px;
+    }
+
+    .carousel-conteudo {
+        width: 55%;
+    }
+
+    .comentario {
+        line-height: 30px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .container-box {
+        padding: 108px 8vw ;
+    }
+
+    .sobre-titulo, .atuacao-titulo, .carousel-titulo, .contato-titulo {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .menu-lista {
+        height: auto;
+        flex-direction: row;
+        position: relative;
+        top: unset;
+        left: unset;
+        background: none;
+        align-items: center;
+        width: 70%;
+        padding-inline: unset;
+    }
+
+    .menu-item a {
+        color: var(--misty-rose);
+    }
+
+    .menu-botao {
+        display: none;
+    }
+
+    .inicio {
+        height: 100vh;
+    }
+
+    .inicio-imagem {
+        height: calc(105vh);
+    }
+
+    .sobre {
+        > .container-box {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "texto imagem-vertical"
+                                 "imagem imagem-vertical"
+                                 "imagem caixa";
+            align-items: start;
+            gap: 40px;
+        }
+    }
+
+    .sobre-conteudo {
+        grid-area: texto;
+        max-width: 600px;
+    }
+
+    .sobre-imagem_desktop {
+        display: unset;
+        width: 325px;
+        grid-area: imagem-vertical;
+        justify-self: flex-end;
+
+    }
+
+    .sobre-imagem {
+        grid-area: imagem;
+        margin-top: unset;
+        max-width: 600px;
+    }
+
+    .sobre-box {
+        grid-area: caixa;
+        width: 325px;
+        margin-top: unset;
+        justify-self: flex-end;
+
+    }
+
+    .atuacao-cards {
+        flex-wrap: nowrap;
+
+    }
+
+    .contato .container-box{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .contato-form {
+        width: 55%;
+    }
+
+    .contato-mapa {
+        width: 40%;
+    }
+
+    .footer .container-box {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "contato local horario"
+                             "copy copy copy";
+    }
+}
+
+@media screen and (min-width: 1180px) {
+    .inicio-titulo {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .inicio-texto {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .inicio-linha {
+        height: 16px;
+        width: 3px;
+    }
+
+    .atuacao-texto {
+        text-align: center;
+    }
+
+    .carousel-conteudo {
+        height: 600px;
+    }
+}
+
+@media screen and (min-width: 1350px){
+    .container-box {
+        margin: auto;
+        padding: unset;
+        padding-block: 168px;
+        max-width: 1080px;
+    }
+    
+    .menu-nav {
+        width: 1080px;
+        margin: auto;
+    }
+
+    .cont {
+        display: flex;
+        width: 1080px;
+        padding: unset;
+        margin: auto;
+        justify-content: end;
+    }
+
+    .inicio-cont {
+        padding: unset;
+    }
+
+    .atuacao-cards {
+        width: 100%;
+        margin-inline: unset;
+    }
+
+    .card {
+        width: calc();
+    }
+
+    .carousel-conteudo {
+        max-width: 1080px;
+    }
+
+    .footer .container-box {
+        padding: unset;
+        padding-block: 40px;
+    }
+}
+
+@media screen and (min-width: 1550px) {
+    .inicio-imagem {
+        height: 100vh;
+        top: 0px;
+        background-position: top center;
+    }
+}
