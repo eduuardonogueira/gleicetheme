@@ -29,7 +29,7 @@
                 <ul id="menuLista" class="menu-lista up">
                     <li class="menu-item"><a href="<?php echo (is_front_page()) ? "#inicio" : home_url() ; ?>">Inicio</a></li>
                     <li class="menu-item"><a href="<?php echo (is_front_page()) ? "#quem somos" : home_url() ; ?>">Quem Somos</a></li>
-                    <li class="menu-item"><a href="<?php echo (is_front_page()) ? "#area de atuacao" : home_url() . "#area de atuacao"; ?>">Áreas de atuação</a></li>
+                    <li class="menu-item"><a href="<?php echo (is_front_page()) ? "#areas de atuacao" : home_url() . "#areas de atuacao"; ?>">Áreas de atuação</a></li>
                     <li class="menu-item"><a href="<?php echo (is_front_page()) ? "#depoimentos" : home_url() ; ?>">Depoimentos</a></li>
                     <li class="menu-item"><a href="/contato">Contato</a></li>
                     <li class="menu-item"><a href="/blog">Blog</a></li>
