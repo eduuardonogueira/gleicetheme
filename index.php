@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/img/logo.webp" type="image/x-icon">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Fira+Code&family=Libre+Baskerville&display=swap" rel="stylesheet">
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css">
-    <title> DRA. Gleice Rodrigues | Advocacia & Consultoria </title>
-</head>
-<body>
-    <header class="menu">
-        <nav class="menu-nav">
-            <a href="#"><img class="menu-logo" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.webp" alt="Logo dra. Gleice Rodrigues"></a>
-
-            <ul id="menuLista" class="menu-lista up">
-                <li class="menu-item"><a href="#inicio">Inicio</a></li>
-                <li class="menu-item"><a href="#quem somos">Quem Somos</a></li>
-                <li class="menu-item"><a href="#areas de atuacao">Áreas de atuação</a></li>
-                <li class="menu-item"><a href="#depoimentos">Depoimentos</a></li>
-                <li class="menu-item"><a href="#contato">Contato</a></li>
-            </ul>
-
-            <button id="botaoMenu" class="menu-botao"><i class="ph ph-list"></i></button>
-        </nav>
-    </header>
-
+<?php get_header(); ?>
     <section id="inicio" class="inicio">
         <div class="inicio-imagem"></div>
     
@@ -213,55 +179,5 @@
             <iframe class="contato-mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d788.8814125665016!2d-43.962459304240994!3d-19.857988888638577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69067888270c1%3A0xbf6fe233aeb412d!2sAv.%20Cel.%20Jos%C3%A9%20Dias%20Bicalho%2C%20341%20-%2010%20-%20S%C3%A3o%20Luiz%2C%20Belo%20Horizonte%20-%20MG%2C%2031275-050!5e0!3m2!1spt-BR!2sbr!4v1691008097614!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
+<?php get_footer(); ?>
 
-    <footer class="footer">
-        <div class="container-box">
-            <div class="footer-contato">
-                <a class="contato-info" href="" target="_blank">
-                    <i class="ph ph-phone"></i>
-                    <p>(31) 3643-1274</p>
-                </a>
-    
-                <a class="contato-info" href="" target="_blank">
-                    <i class="ph ph-whatsapp-logo"></i>
-                    <p>(31) 9 8471-9369</p>
-                </a>
-    
-                <a class="contato-info" href="" target="_blank">
-                    <i class="ph ph-envelope"></i>
-                    <p>juridico@gleicerodrigues.adv.br</p>
-                </a>
-            </div>
-            
-            <a class="footer-local" href="" target="_blank">
-                <i class="ph ph-map-pin"></i>
-                <p>Av. Cel. José Dias Bicalho, 341, Loja 10<br> São Luiz, Belo Horizonte <br> MG, 31275-050</p>
-            </a>
-    
-            <div class="footer-horario">
-                <div>
-                    <i class="ph ph-clock"></i>
-                    <p> <strong>Horário de atendimento:</strong></p>
-                </div>
-    
-                <p>Segunda a Sexta-feira <br> das 09h00 às 18h00.</p>
-            </div>
-        
-            <p class="copyright">© Copyright 2023. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- Botao do whatsapp -->
-    <a 
-        href="https://wa.me/5531984719369?text=Olá!%20Estou%20interessado%20em%20uma%20consultoria!" 
-        class="botao-wpp"
-        target="_blank"    
-    >
-        <i class="ph ph-whatsapp-logo"></i>
-    </a>
-        
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri() ?>/assets/javascript/script.js"></script>
-</body>
-</html>
