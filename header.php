@@ -27,7 +27,7 @@
                 <a href="/"><img class="menu-logo" src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.webp" alt="Logo dra. Gleice Rodrigues"></a>
 
                 <ul id="menuLista" class="menu-lista up">
-                    <li class="menu-item"><a href="<?php echo (is_home()) ? "#inicio" : "/" ; ?> inicio">Inicio</a></li>
+                    <li class="menu-item"><a href="<?php echo (is_home()) ? "#inicio" : "/" ; ?>">Inicio</a></li>
                     <li class="menu-item"><a href="#quem somos">Quem Somos</a></li>
                     <li class="menu-item"><a href="#areas de atuacao">Áreas de atuação</a></li>
                     <li class="menu-item"><a href="#depoimentos">Depoimentos</a></li>
