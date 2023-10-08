@@ -15,6 +15,10 @@
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css">
     <title> DRA. Gleice Rodrigues | Advocacia & Consultoria </title>
+
+    <!-- Header Wordpress -->
+    <?php wp_head(); ?>
+    <!-- Fecha header Wordpress -->
 </head>
 <body>
     <header class="menu">
