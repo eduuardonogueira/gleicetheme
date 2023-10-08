@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="assets/img/logo.webp" type="image/x-icon">
 </head>
 <body <?php body_class(); ?>>
-   <header class="my-logo">
-   <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a></h1>
- </header>
+    <header class="my-logo">
+        <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a></h1>
+    </header>
  <?php wp_nav_menu( array( 'header-menu' => 'header-menu' ) ); ?>
