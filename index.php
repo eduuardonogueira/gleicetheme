@@ -8,7 +8,12 @@
             <div class="container-box">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <article class="blog-post">
-                        <?php if ( has_post_thumbnail()) echo '<img src="' . the_post_thumbnail() . '" alt="Imagem de destaque">' ?>
+                        <?php if ( has_post_thumbnail()) {
+                             $thumbnail_id = get_post_thumbnail_id();
+                             $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
+                        
+                            echo '<img src="' . $thumbnail_url[0] . '" alt="Imagem de destaque">'; 
+                        }; ?>
                         <div class="blog-post-content">
                             <p class="blog-post-date"><?php the_date(); ?></p>
                             <h1 class="blog-post-title"><?php the_title(); ?></h1>
