@@ -60,11 +60,12 @@
     color: black;
 }
 
-.blog-post-content > p {
+.blog-post-content > p :nth-child(1) {
     text-align: justify;
+    line-height: 20px;
 }
 
-.blog-post-link {
+.blog-post-link button {
     padding: 12px;
     border: none;
     width: 100%;
