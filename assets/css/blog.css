@@ -73,6 +73,10 @@
     color: white;
 }
 
+.blog-post-link button:hover {
+    
+}
+
 @media screen and (min-width: 600px) {
     .blog {
         > div {

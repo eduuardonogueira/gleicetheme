@@ -4,7 +4,7 @@
 <?php get_header(); ?>
 
         <section class="blog">
-            <div class="blog-background">
+            <div class="blog-background" style=" background: "url("<?php if ( has_post_thumbnail()) the_post_thumbnail('post-thumb'); ?>")" ">
                 <div class="overlay"></div>
             </div>
 

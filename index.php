@@ -1,13 +1,14 @@
 <?php get_header(); ?>
 
         <section class="blog">
-            <div class="blog-background">
+            <div class="blog-background" style="background: "url("<?php echo get_stylesheet_directory_uri() ?>/assets/img/background-blog.webp")"">
                 <div class="overlay"></div>
             </div>
 
             <div class="container-box">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <article class="blog-post">
+                        <?php if ( has_post_thumbnail()) the_post_thumbnail('home-thumb'); ?>
                         <img src="<?php echo the_post_thumbnail_url()?>" alt="imagem do post">
     
                         <?php $thumbnail = get_the_post_thumbnail();

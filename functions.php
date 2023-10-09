@@ -11,5 +11,13 @@ function wpdocs_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
+// post thumbnail support
+if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
+ 
+if ( function_exists( 'add_image_size' ) ) {
+    add_image_size( 'post-thumb', 630, 270 );
+    add_image_size( 'home-thumb', 200, 270, true );
+}
+
 
 ?>
