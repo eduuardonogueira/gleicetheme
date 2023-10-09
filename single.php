@@ -5,7 +5,7 @@
 
         <section class="blog">
             <?php if ( has_post_thumbnail() ) {
-                $$thumbnail_id = get_post_thumbnail_id();
+                $thumbnail_id = get_post_thumbnail_id();
                 $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
            
                echo '
