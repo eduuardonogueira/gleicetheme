@@ -1,7 +1,8 @@
 <?php get_header(); ?>
+    <?php $style = 'style="background-image: url(\'' . get_stylesheet_directory_uri() . "/assets/img/background-blog.webp" . '\');"';?>
 
         <section class="blog">
-            <div class="blog-background" style="background: "url("<?php echo get_stylesheet_directory_uri() ?>/assets/img/background-blog.webp")"">
+            <div class="blog-background" <?php echo $style; ?>>
                 <div class="overlay"></div>
             </div>
 
