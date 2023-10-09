@@ -3,17 +3,19 @@
 ?>
 <?php get_header(); ?>
 
-        <section class="blog">
-            <?php if ( has_post_thumbnail() ) {        
-                $thumbnail_url = the_post_thumbnail_url();
+<?php if (has_post_thumbnail()) {
+    $thumbnail_id = get_post_thumbnail_id(); // Obtém o ID da imagem de destaque
+    $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full'); // Obtém a URL da imagem de destaque no tamanho 'full'
 
-                echo '
-                    <div class="blog-background" style=" background: "url("' . $thumbnail_url .'")" ">
-                        <div class="overlay"></div>
-                    </div>
-                    ';
-            }; ?>            
-
+    $style = 'style="background: url(\'' . esc_url($thumbnail_url[0]) . '\');"';
+    } else {
+    // Se o post não tiver uma imagem de destaque, você pode definir um estilo padrão
+    $style = 'style="background: url(\'' . get_stylesheet_directory_uri() . "/assets/img/background-blog.webp" . '\');"';
+    }
+?>
+            <div class="blog-background" <?php echo $style; ?>>
+                <div class="overlay"></div>
+            </div>
             <div class="container-box">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <article class="blog-post">
