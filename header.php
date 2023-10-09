@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Gleice Rodrigues">
+        <meta name="description" content="Advocacia e Consultoria">
+        <meta name="keywords" content="advogada, direito, civil, trabalhista, previdenciario, consultoria, juridico">
+        <meta name="copyright" content="© 2023 Gleice Rodrigues">
+        <meta name="robots" content="index,follow">
         <link rel="shortcut icon" href="assets/img/logo.webp" type="image/x-icon">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
