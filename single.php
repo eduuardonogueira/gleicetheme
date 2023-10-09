@@ -4,12 +4,9 @@
 <?php get_header(); ?>
 
         <section class="blog">
-            <?php if ( has_post_thumbnail() ) {
-                $thumbnail_id = get_post_thumbnail_id();
-                $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
-           
-               echo '
-                    <div class="blog-background" style=" background: "url("' . $thumbnail_url[0] .'")" ">
+            <?php if ( has_post_thumbnail() ) {        
+                echo '
+                    <div class="blog-background" style=" background: "url("' . the_post_thumbnail_url() .'")" ">
                         <div class="overlay"></div>
                     </div>
                     ';
