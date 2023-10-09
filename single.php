@@ -9,7 +9,7 @@
                 $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
            
                echo '
-                    <div class="blog-background" style=" background: "url(' . $thumbnail_url[0] .')" ">
+                    <div class="blog-background" style=" background: "url("' . $thumbnail_url[0] .'")" ">
                         <div class="overlay"></div>
                     </div>
                     ';
