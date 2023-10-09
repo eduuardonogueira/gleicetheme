@@ -7,6 +7,7 @@
             </div>
 
             <div class="container-box">
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <article class="blog-post">
                         <?php if ( has_post_thumbnail()) {
                              $thumbnail_id = get_post_thumbnail_id();
@@ -23,6 +24,9 @@
                             </a>
                         </div>
                     </article>
+                <?php endwhile; else: ?>
+                <p><?php _e('Desculpe, não há posts no momento'); ?></p>
+                <?php endif; ?>
             </div>
         </section>
 
