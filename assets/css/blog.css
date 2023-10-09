@@ -64,6 +64,14 @@
     text-align: justify;
 }
 
+.blog-post-link {
+    padding: 12px;
+    border: none;
+    width: 100%;
+    background: #EB9B00;
+    color: white;
+}
+
 @media screen and (min-width: 600px) {
     .blog {
         > div {
