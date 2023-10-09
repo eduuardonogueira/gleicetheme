@@ -26,3 +26,11 @@
         </section>
 
 <?php get_footer(); ?>
+
+
+<?php if ( has_post_thumbnail()) the_post_thumbnail('home-thumb'); ?>
+
+<img src="<?php if ( has_post_thumbnail()) echo the_post_thumbnail_url()?>" alt="imagem do post">
+
+<?php if ( has_post_thumbnail()) <img src="<?php the_post_thumbnail_url() ?>"></img>;
+    echo '<div class="post-thumbnail">' . $thumbnail . '</div>'; ?>
