@@ -5,8 +5,10 @@
 
         <section class="blog">
             <?php if ( has_post_thumbnail() ) {        
+                $thumbnail_url = the_post_thumbnail_url();
+
                 echo '
-                    <div class="blog-background" style=" background: "url("' . the_post_thumbnail_url() .'")" ">
+                    <div class="blog-background" style=" background: "url("' . $thumbnail_url .'")" ">
                         <div class="overlay"></div>
                     </div>
                     ';
