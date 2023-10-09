@@ -718,7 +718,7 @@ section h1 {
     }
 
     .carousel-conteudo {
-        height: 600px;
+        height: 400px;
     }
 }
 
@@ -771,5 +771,8 @@ section h1 {
         height: 100vh;
         top: 0px;
         background-position: top center;
+    }
+    .carousel-conteudo {
+        height: 600px;
     }
 }

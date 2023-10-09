@@ -60,7 +60,7 @@
     color: black;
 }
 
-.blog-post-text {
+.blog-post-text > p {
     text-align: justify;
 }
 

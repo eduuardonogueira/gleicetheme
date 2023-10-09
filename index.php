@@ -16,7 +16,7 @@
                     <div class="blog-post-content">
                         <p class="blog-post-date"><?php the_date(); ?></p>
                         <h1 class="blog-post-title"><?php the_title(); ?></h1>
-                        <p class="blog-post-text"><?php echo the_excerpt(); ?></p>
+                        <div class="blog-post-text"><?php get_the_excerpt(); ?></div>
                     </div>
                 </article>
                 <?php endwhile; else: ?>
