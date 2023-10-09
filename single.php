@@ -4,9 +4,16 @@
 <?php get_header(); ?>
 
         <section class="blog">
-            <div class="blog-background" style=" background: "url("<?php if ( has_post_thumbnail()) the_post_thumbnail('post-thumb'); ?>")" ">
-                <div class="overlay"></div>
-            </div>
+            <?php if ( has_post_thumbnail() ) {
+                $$thumbnail_id = get_post_thumbnail_id();
+                $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
+           
+               echo '
+                    <div class="blog-background" style=" background: "url(' . $thumbnail_url[0] .')" ">
+                        <div class="overlay"></div>
+                    </div>
+                    ';
+            }; ?>            
 
             <div class="container-box">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -26,11 +33,3 @@
         </section>
 
 <?php get_footer(); ?>
-
-
-<?php if ( has_post_thumbnail()) the_post_thumbnail('home-thumb'); ?>
-
-<img src="<?php if ( has_post_thumbnail()) echo the_post_thumbnail_url()?>" alt="imagem do post">
-
-<?php if ( has_post_thumbnail()) <img src="<?php the_post_thumbnail_url() ?>"></img>;
-    echo '<div class="post-thumbnail">' . $thumbnail . '</div>'; ?>

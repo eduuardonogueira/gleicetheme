@@ -19,7 +19,7 @@
                             <h1 class="blog-post-title"><?php the_title(); ?></h1>
                             <?php the_excerpt(); ?>
                             <a class="blog-post-link" href="<?php the_permalink() ?>">
-                                <button>Leia mais</button>
+                                <button>Continuar leitura</button>
                             </a>
                         </div>
                     </article>
