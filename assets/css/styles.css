@@ -612,7 +612,8 @@ section h1 {
         left: unset;
         background: none;
         align-items: center;
-        width: 70%;
+        width: auto;
+        gap: 38px;
         padding-inline: unset;
     }
 
