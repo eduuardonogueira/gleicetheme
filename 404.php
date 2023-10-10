@@ -12,7 +12,7 @@
         
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets/css/404.css">
 
-        <title><?php bloginfo('name'); ?></title>
+        <title>404 Not Found</title>
 
         <!-- Header Wordpress -->
         <?php wp_head(); ?>
@@ -23,7 +23,7 @@
         <div class="stars">
             <div class="central-body">
                 <img class="image-404" src="http://salehriaz.com/404Page/img/404.svg" width="300px">
-                <a href="http://salehriaz.com/404Page/404.html" class="btn-go-home" target="_blank">GO BACK HOME</a>
+                <a href="/" class="btn-go-home" target="_blank">VOLTAR PARA HOME</a>
             </div>
             <div class="objects">
                 <img class="object_rocket" src="http://salehriaz.com/404Page/img/rocket.svg" width="40px">
