@@ -88,7 +88,6 @@
                     <h1 class="post-recents-title">Posts recentes:</h1>
                     
                     <?php if ($recent_posts->have_posts()) : ?>
-                    <article class="blog-post">
                         <?php while ($recent_posts->have_posts()) : 
                             $recent_posts->the_post();
                             $title_recent = get_the_title();
@@ -102,6 +101,7 @@
                                 echo '<img src="' . $thumbnail_url[0] . '" alt="Imagem de destaque">'; 
                             }; 
                             
+                            echo '<article class="blog-post">';
                             echo '<div class="blog-post-content">';
 
                             echo '<p class="blog-post-date"> ' . $published_recent . ' </p>';
@@ -113,11 +113,10 @@
                             echo '</button>';
 
                             echo '</div>';
+                            echo '</article>';
                             endwhile;
-                        ?>
-                    </article>
-                    <?php wp_reset_postdata();?>
-                    <?php endif; ?>
+                            wp_reset_postdata();
+                        endif; ?>
 
                     <button class="post-recents-button">
                         <a href="/blog">Ver mais posts</a>
