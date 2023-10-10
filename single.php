@@ -94,6 +94,8 @@
                             $published_recent = get_the_date();
                             $link_recent = get_permalink(); 
                             
+                            echo '<article class="blog-post">';
+                            
                             if ( has_post_thumbnail()) {
                                 $thumbnail_id = get_post_thumbnail_id();
                                 $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
@@ -101,7 +103,6 @@
                                 echo '<img src="' . $thumbnail_url[0] . '" alt="Imagem de destaque">'; 
                             }; 
                             
-                            echo '<article class="blog-post">';
                             echo '<div class="blog-post-content">';
 
                             echo '<p class="blog-post-date"> ' . $published_recent . ' </p>';
