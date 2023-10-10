@@ -146,7 +146,7 @@
 .single-post-tags, .single-post-description {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 8px;
     width: 100%;
 }
 

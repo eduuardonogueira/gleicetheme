@@ -85,7 +85,7 @@
 
             <article class="single-post-recents">
                 <div class="container-box">
-                    <?php if ( $recent_posts->have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <?php if ( $recent_posts->have_posts() )  while ( $recent_posts->have_posts() ) : $recent_posts->the_post(); ?>
                         <h1 class="post-recents-title">Posts recentes:</h1>
 
                         <article class="blog-post">
