@@ -87,25 +87,39 @@
                 <div class="container-box">
                     <h1 class="post-recents-title">Posts recentes:</h1>
                     
+                    <?php
+                    if ($recent_posts->have_posts()) : ?>
+                    <article class="blog-post">
+                        <?php while ($recent_posts->have_posts()) : 
+                            $recent_posts->the_post();
+                            $title_recent = get_the_title();
+                            $published_recent = get_the_date();
+                            $link_recent = get_permalink(); 
+                        ?>
+
+                        <?php if ( has_post_thumbnail()) {
+                            $thumbnail_id = get_post_thumbnail_id();
+                            $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
+                        
+                            echo '<img src="' . $thumbnail_url[0] . '" alt="Imagem de destaque">'; 
+                        }; ?>
+
+                        <div class="blog-post-content">
+                            <p class="blog-post-date"> <?php echo $published_recent; ?> </p>
+                            <h1 class="blog-post-title"> <?php echo $title_recent; ?> </h1>
+                            <?php the_excerpt(); ?>
+                            <button class="blog-post-link"">
+                                <a href="<?php echo $link_recent; ?>">Continuar leitura</a>
+                            </button>
+                        </div>
+                        <?php endwhile;?>
+                    </article>
+                    <?php wp_reset_postdata();?>
+                    <?php endif; ?>
 
                     <button class="post-recents-button">
                         <a href="/blog">Ver mais posts</a>
                     </button>
-
-                    <?php
-                    if ($recent_posts->have_posts()) {
-                        echo '<h2>Posts Recentes</h2>';
-                        echo '<ul>';
-                        while ($recent_posts->have_posts()) {
-                            $recent_posts->the_post();
-                            $titulo_recente = get_the_title();
-                            echo '<li><a href="' . get_permalink() . '">' . $titulo_recente . '</a></li>';
-                        }
-                        echo '</ul>';
-                        wp_reset_postdata(); // Redefine o loop dos posts recentes
-                    }
-                    ?>
-
                 </div>
             </article>
         </section>
