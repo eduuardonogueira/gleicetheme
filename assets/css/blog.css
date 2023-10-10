@@ -43,6 +43,7 @@
 }
 
 .blog-post {
+    height: fit-content;
     background: #fff;
     display: flex;
     flex-direction: column;
