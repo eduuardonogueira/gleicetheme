@@ -3,9 +3,10 @@
 ?>
 <?php get_header(); ?>
 
-<?php the_title(); ?>
-
-<?php the_content(); ?>
+<section class"container-box" >
+  <?php the_title(); ?>
+  <?php the_content(); ?>
+</section>
 
 <section id="contato" class="contato">
     <div class="container-box">
