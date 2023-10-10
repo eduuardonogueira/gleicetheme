@@ -3,10 +3,10 @@
 ?>
 <?php get_header(); ?>
 
-<section class"container-box" >
-  <?php the_title(); ?>
-  <?php the_content(); ?>
-</section>
+<article class="single-post-content">
+    <h1 class="single-post-title"> <?php the_title() ?> </h1>
+    <?php the_content(); ?>
+</article>
 
 <section id="contato" class="contato">
     <div class="container-box">
