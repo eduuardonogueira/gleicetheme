@@ -1,10 +1,8 @@
 <?php get_header(); ?>
-    <?php $style = 'style="background-image: url(\'' . get_stylesheet_directory_uri() . "/assets/img/background-blog.webp" . '\');"';?>
-
         <section class="blog">
-            <div class="blog-background" <?php echo $style; ?>>
+            <div class="blog-background">
                 <div class="overlay"></div>
-                <span class="background-title">Blog</span>
+                <span class="background-title"><?php the_title(); ?></span>
             </div>
 
             <div class="container-box">
@@ -15,6 +13,8 @@
                              $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
                         
                             echo '<img src="' . $thumbnail_url[0] . '" alt="Imagem de destaque">'; 
+                        } else {
+                            echo '<img src="' . get_stylesheet_directory_uri() .'/assets/img/background-blog.webp" alt="Imagem de destaque">';
                         }; ?>
                         <div class="blog-post-content">
                             <p class="blog-post-date"><?php the_date(); ?></p>
