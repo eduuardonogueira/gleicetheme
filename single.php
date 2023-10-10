@@ -114,9 +114,9 @@
 
                             echo '</div>';
                             echo '</article>';
-                            endwhile;
-                            wp_reset_postdata();
-                        endif; ?>
+                        endwhile;
+                        wp_reset_postdata();
+                    endif; ?>
 
                     <button class="post-recents-button">
                         <a href="/blog">Ver mais posts</a>
