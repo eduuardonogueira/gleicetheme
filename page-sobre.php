@@ -3,6 +3,9 @@
 ?>
 <?php get_header(); ?>
 
-<p> Página em construção </p>
+<div class="container-box">
+    <?php the_title() ?>  
+    <?php the_content() ?>
+</div>
 
 <?php get_footer(); ?>
