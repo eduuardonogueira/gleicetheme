@@ -103,14 +103,14 @@
                             }; 
                             
                             echo '<div class="blog-post-content">';
-                            
-                            echo '<p class="blog-post-date"> 'echo $published_recent;' </p>';
-                            echo '<h1 class="blog-post-title"> 'echo $title_recent;' </h1>';
+
+                            echo '<p class="blog-post-date"> ' . $published_recent . ' </p>';
+                            echo '<h1 class="blog-post-title"> ' . $title_recent . ' </h1>';
                             the_excerpt();
 
                             echo '<button class="blog-post-link">';
-                            echo '<a href="'echo $link_recent;'">Continuar leitura</a>';
-                            echo '</button>'
+                            echo '<a href="' . $link_recent . '">Continuar leitura</a>';
+                            echo '</button>';
 
                             echo '</div>';
                             endwhile;
