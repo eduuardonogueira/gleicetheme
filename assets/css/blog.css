@@ -219,7 +219,7 @@
 
 }
 
-@media screen and (min-windth: 1024px) {
+@media screen and (min-width: 1024px) {
     .blog-background {
         background: url(../img/background-blog.webp) center no-repeat ;
     }
