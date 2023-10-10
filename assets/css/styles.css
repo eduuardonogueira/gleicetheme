@@ -612,7 +612,7 @@ section h1 {
         left: unset;
         background: none;
         align-items: center;
-        width: auto;
+        width: auto !important;
         gap: 38px;
         padding-inline: unset;
     }
