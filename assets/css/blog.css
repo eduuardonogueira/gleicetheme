@@ -115,6 +115,7 @@
     line-height: 28px;
     font-weight: bold;
     text-align: justify;
+    color: #3E0A03;
 }
 
 .single-post-title::first-letter {
