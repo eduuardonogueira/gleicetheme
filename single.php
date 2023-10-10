@@ -86,28 +86,7 @@
             <article class="single-post-recents">
                 <div class="container-box">
                     <h1 class="post-recents-title">Posts recentes:</h1>
-                    <?php if ( $recent_posts->have_posts() )  while ( $recent_posts->have_posts() ) : $recent_posts->the_post(); ?>
-
-                    <article class="blog-post">
-                        <?php if ( has_post_thumbnail()) {
-                            $thumbnail_id = get_post_thumbnail_id();
-                            $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
-                        
-                            echo '<img src="' . $thumbnail_url[0] . '" alt="Imagem de destaque">'; 
-                        }; ?>
-                        <div class="blog-post-content">
-                            <p class="blog-post-date"> <?php the_date(); ?> </p>
-                            <h1 class="blog-post-title"> <?php the_title(); ?> </h1>
-                            <?php the_excerpt(); ?>
-                            <button class="blog-post-link"">
-                                <a href="<?php the_permalink() ?>">Continuar leitura</a>
-                            </button>
-                        </div>
-                    </article>
-
-                    <?php endwhile; else: ?>
-                    <p><?php _e('Desculpe, não há posts no momento'); ?></p>
-                    <?php endif; ?>
+                    
 
                     <button class="post-recents-button">
                         <a href="/blog">Ver mais posts</a>
