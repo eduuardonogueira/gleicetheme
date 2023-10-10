@@ -6,11 +6,7 @@
         <section class="blog">
             <div class="blog-background">
                 <div class="overlay"></div>
-                <span class="background-title"><?php the_title(); ?></span>
-            </div>
-
-            <div class="container-box">
-                <?php the_content(); ?> 
+                <span class="background-title">Blog</span>
             </div>
 
             <div class="container-box">

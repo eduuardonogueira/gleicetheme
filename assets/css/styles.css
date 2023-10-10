@@ -84,7 +84,7 @@ section h1 {
 }
 
 .down {
-    height: 30% !important;
+    height: 25% !important;
     opacity: 1 !important;
     border-bottom: var(--principal) 3px solid;
     padding-block: 24px;
