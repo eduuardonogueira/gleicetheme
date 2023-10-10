@@ -95,12 +95,14 @@
                             $link_recent = get_permalink(); 
                             
                             echo '<article class="blog-post">';
-                            
+
                             if ( has_post_thumbnail()) {
                                 $thumbnail_id = get_post_thumbnail_id();
                                 $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
                         
                                 echo '<img src="' . $thumbnail_url[0] . '" alt="Imagem de destaque">'; 
+                            } else {
+                                echo '<img src="' . get_stylesheet_directory_uri() .'/assets/img/background-blog.webp" alt="Imagem de destaque">';
                             }; 
                             
                             echo '<div class="blog-post-content">';
