@@ -17,7 +17,7 @@ section h1 {
     --black-bean: #3E0A03;
     --garnet: #6C3833;
     --principal: #996562;
-    --logo-letra: #d7bfb8;
+    --logo-letra: #ebe2e0;
     --misty-rose: #EADAD7;
     --robin-eggblue: #00CECB;
     --gray: #666;
@@ -108,7 +108,8 @@ section h1 {
 }
 
 .menu-item  {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 500;
     transition: 0.3s ease;
     
     > a {
@@ -197,6 +198,7 @@ section h1 {
     line-height: 38px;
     color: var(--black-bean);
     text-align: center;
+    font-weight: bold;
 }
 
 .sobre-texto, .atuacao-texto {
