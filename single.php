@@ -14,49 +14,77 @@
     }
 ?>
 
+    <?php while ( have_posts() ) {
+        the_post();
+
+        $title = the_title();
+        $published = the_date();
+        $modified = the_modified_date();
+        $author = the_author();
+        $tags = the_tags();
+
+    }; ?>
+    
+        
         <section class="blog">
             <div class="blog-background" <?php echo $style; ?> >
                 <div class="overlay"></div>
-                <span class="background-title"> <?php the_title(); ?> </span>
+                <span class="background-title"> <?php echo $title; ?> </span>
             </div>
 
             <article class="single-post-content">
-                <h1 class="single-post-title"> <?php the_title(); ?> </h1>
+                <h1 class="single-post-title"> <?php echo $title; ?> </h1>
 
-                <p class="single-post-date"> <?php the_date(); ?> </p>
+                <p class="single-post-date"> <?php echo $published; ?> </p>
                 
                 <?php the_content(); ?>
+                
+                <?php
+                    $tags = get_the_tags(); // Obtém as tags do post atual
 
-                <ul class="single-post-tags">
-                    <li class="post-tag">
-                        <i class="ph ph-tag-chevron"></i>
-                        <p> <?php the_category() ?> </p>
-                    </li>
-                </ul>
+                    if ($tags) {
+                        echo '<ul class="single-post-tags">';
+                        foreach ($tags as $tag) {
+                            echo '<li class="post-tag">';
+                            echo '<i class="ph ph-tag-chevron"></i>';
+                            echo '<p>' . $tag->name . '</p>';
+                            echo '</li>';
+                        };
+                        echo '</ul>';
+                    } else {
+                        echo '<li class="post-tag">';
+                        echo '<i class="ph ph-tag-chevron"></i>';
+                        echo '<p>Sem Tags</p>';
+                        echo '</li>';
+                    };
+                ?>
                 <ul class="single-post-description">
                     <li class="post-description">
                         <i class="ph ph-user"></i>
-                        <p> <?php the_author() ?> </p>
+                        <p> <?php echo $author; ?> </p>
                     </li>
                     <li class="post-description">
                         <i class="ph ph-calendar"></i>
-                        <p>Publicado em: <?php the_date() ?></p>
+                        <p>Publicado em: <?php echo $published; ?> </p>
                     </li>
                     <li class="post-description">
                         <i class="ph ph-pencil-simple"></i>
-                        <p>Modificado em: <?php the_modified_date() ?> </p>
+                        <p>Modificado em: <?php echo $modified; ?> </p>
                     </li>
                 </ul>
             </article>
-
             <article class="single-post-recents">
                 <div class="container-box">
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <h1 class="post-recents-title">Posts recentes:</h1>
 
                         <article class="blog-post">
-                            <img src="/assets/img/background-blog.webp" alt="Imagem de destaque"> 
-
+                            <?php if ( has_post_thumbnail()) {
+                                $thumbnail_id = get_post_thumbnail_id();
+                                $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
+                            
+                                echo '<img src="' . $thumbnail_url[0] . '" alt="Imagem de destaque">'; 
+                            }; ?>
                             <div class="blog-post-content">
                                 <p class="blog-post-date"> <?php the_date(); ?> </p>
                                 <h1 class="blog-post-title"> <?php the_title(); ?> </h1>

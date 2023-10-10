@@ -4,6 +4,7 @@
         <section class="blog">
             <div class="blog-background" <?php echo $style; ?>>
                 <div class="overlay"></div>
+                <span class="background-title"> <?php  ?> </span>
             </div>
 
             <div class="container-box">
@@ -19,9 +20,9 @@
                             <p class="blog-post-date"><?php the_date(); ?></p>
                             <h1 class="blog-post-title"><?php the_title(); ?></h1>
                             <?php the_excerpt(); ?>
-                            <a class="blog-post-link" href="<?php the_permalink() ?>">
-                                <button>Continuar leitura</button>
-                            </a>
+                            <button class="blog-post-link"">
+                                <a href="<?php the_permalink() ?>">Continuar leitura</a>
+                            </button>
                         </div>
                     </article>
                 <?php endwhile; else: ?>
