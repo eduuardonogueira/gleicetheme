@@ -5,4 +5,4 @@
 
 <p> Página em construção </p>
 
-<?php get_footer; ?>
+<?php get_footer(); ?>
