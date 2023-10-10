@@ -87,32 +87,34 @@
                 <div class="container-box">
                     <h1 class="post-recents-title">Posts recentes:</h1>
                     
-                    <?php
-                    if ($recent_posts->have_posts()) : ?>
+                    <?php if ($recent_posts->have_posts()) : ?>
                     <article class="blog-post">
                         <?php while ($recent_posts->have_posts()) : 
                             $recent_posts->the_post();
                             $title_recent = get_the_title();
                             $published_recent = get_the_date();
                             $link_recent = get_permalink(); 
-                        ?>
-
-                        <?php if ( has_post_thumbnail()) {
-                            $thumbnail_id = get_post_thumbnail_id();
-                            $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
+                            
+                            if ( has_post_thumbnail()) {
+                                $thumbnail_id = get_post_thumbnail_id();
+                                $thumbnail_url = wp_get_attachment_image_src($thumbnail_id, 'full');
                         
-                            echo '<img src="' . $thumbnail_url[0] . '" alt="Imagem de destaque">'; 
-                        }; ?>
+                                echo '<img src="' . $thumbnail_url[0] . '" alt="Imagem de destaque">'; 
+                            }; 
+                            
+                            echo '<div class="blog-post-content">';
+                            
+                            echo '<p class="blog-post-date"> 'echo $published_recent;' </p>';
+                            echo '<h1 class="blog-post-title"> 'echo $title_recent;' </h1>';
+                            the_excerpt();
 
-                        <div class="blog-post-content">
-                            <p class="blog-post-date"> <?php echo $published_recent; ?> </p>
-                            <h1 class="blog-post-title"> <?php echo $title_recent; ?> </h1>
-                            <?php the_excerpt(); ?>
-                            <button class="blog-post-link"">
-                                <a href="<?php echo $link_recent; ?>">Continuar leitura</a>
-                            </button>
-                        </div>
-                        <?php endwhile;?>
+                            echo '<button class="blog-post-link">';
+                            echo '<a href="'echo $link_recent;'">Continuar leitura</a>';
+                            echo '</button>'
+
+                            echo '</div>';
+                            endwhile;
+                        ?>
                     </article>
                     <?php wp_reset_postdata();?>
                     <?php endif; ?>
