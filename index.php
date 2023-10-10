@@ -4,7 +4,7 @@
         <section class="blog">
             <div class="blog-background" <?php echo $style; ?>>
                 <div class="overlay"></div>
-                <span class="background-title"> <?php  ?> </span>
+                <span class="background-title"> <?php wp_title() ?> </span>
             </div>
 
             <div class="container-box">

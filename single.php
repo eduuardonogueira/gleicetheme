@@ -17,11 +17,11 @@
     <?php while ( have_posts() ) {
         the_post();
 
-        $title = the_title();
-        $published = the_date();
-        $modified = the_modified_date();
-        $author = the_author();
-        $tags = the_tags();
+        $title = get_the_title();
+        $published = get_the_date();
+        $modified = get_the_modified_date();
+        $author = get_the_author();
+        $tags = get_the_tags();
 
     }; ?>
     
@@ -40,8 +40,6 @@
                 <?php the_content(); ?>
                 
                 <?php
-                    $tags = get_the_tags(); // Obtém as tags do post atual
-
                     if ($tags) {
                         echo '<ul class="single-post-tags">';
                         foreach ($tags as $tag) {
@@ -73,9 +71,21 @@
                     </li>
                 </ul>
             </article>
+
+            <?php 
+                wp_reset_postdata();
+                
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 4, 
+                );
+                
+                $recent_posts = new WP_Query($args); 
+            ?>
+
             <article class="single-post-recents">
                 <div class="container-box">
-                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+                    <?php if ( $recent_posts->have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <h1 class="post-recents-title">Posts recentes:</h1>
 
                         <article class="blog-post">
