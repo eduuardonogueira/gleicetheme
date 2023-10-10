@@ -3,10 +3,11 @@
 ?>
 <?php get_header(); ?>
 
+<?php the_title(); ?>
+
+<?php the_content(); ?>
+
 <section id="contato" class="contato">
-    <div class="container-box">
-        <?php the_content() ?>
-    </div>
     <div class="container-box">
         <form class="contato-form" action="send-email.php" method="post">
             <h1 class="contato-titulo">Fale Conosco</h1>
