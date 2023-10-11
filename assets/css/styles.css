@@ -128,12 +128,11 @@ section h1 {
 /* ########################################## Inicio ####################################################*/
 
 .inicio {
-    height: 477px;
+    height: 400px;
     background: transparent;
     display: flex;
     justify-content: end;
     align-items: center;
-    padding-top: 77px;
 }
 
 .inicio-imagem {
