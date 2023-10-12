@@ -17,7 +17,7 @@ botaoMenu.addEventListener('click', () => {
  }, { 
   threshold: [0.25 , 0.5 , 0.75 , 1] 
  }) 
- Array.from(document.querySelectorAll('.inicio-titulo, .clientes-imagem, .mapa-titulo, .servicos-titulo')).forEach( element => { 
+ Array.from(document.querySelectorAll('.inicio-titulo, .sobre-titulo, .atuacao-titulo, .contato-mapa')).forEach( element => { 
  dashright.observe(element) 
  }) 
  /* Animação para a direita - fim */ 
@@ -33,7 +33,7 @@ botaoMenu.addEventListener('click', () => {
  }, { 
   threshold: [0.25 , 0.5 , 0.75 , 1] 
  }) 
- Array.from(document.querySelectorAll('.inicio-imagem, .rede-imagem, .mapa-imagem, .clientes-titulo')).forEach( element => { 
+ Array.from(document.querySelectorAll('.inicio-texto, .carousel-titulo, .contato-form ')).forEach( element => { 
  dashleft.observe(element) 
  }) 
  /* Animação para a esquerda - fim*/ 
@@ -49,7 +49,7 @@ botaoMenu.addEventListener('click', () => {
  }, { 
   threshold: [0.25 , 0.5 , 0.75 , 1] 
  }) 
- Array.from(document.querySelectorAll('.servicos-vantagem, .vantagem-divisor_mobile')).forEach( element => { 
+ Array.from(document.querySelectorAll('.sobre-imagem, .sobre-imagem_desktop, .card')).forEach( element => { 
  dashup.observe(element) 
  }) 
  /* Animação para baixo - fim */ 
