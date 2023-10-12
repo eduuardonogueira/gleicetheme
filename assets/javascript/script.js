@@ -49,7 +49,7 @@ botaoMenu.addEventListener('click', () => {
  }, { 
   threshold: [0.25 , 0.5 , 0.75 , 1] 
  }) 
- Array.from(document.querySelectorAll('.sobre-imagem, .sobre-imagem_desktop, .card')).forEach( element => { 
+ Array.from(document.querySelectorAll('.sobre-imagem, .sobre-imagem_desktop, .card, .contato-titulo')).forEach( element => { 
  dashup.observe(element) 
  }) 
  /* Animação para baixo - fim */ 
