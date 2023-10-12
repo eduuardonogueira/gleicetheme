@@ -3,6 +3,17 @@
 ?>
 <?php get_header(); ?>
 
+<style>
+    
+</style>
+
+<style>
+    .menu-lista .menu-item:nth-child(4) a{
+        color: #ffc655;
+    }
+</style>
+
+
 <article class="single-post-content">
     <h1 class="single-post-title"> <?php the_title() ?> </h1>
     <?php the_content(); ?>

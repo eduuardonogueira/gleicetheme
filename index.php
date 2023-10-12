@@ -3,6 +3,13 @@
 ?>
 
 <?php get_header(); ?>
+
+<style>
+    .menu-lista .menu-item:nth-child(3) a{
+        color: #ffc655;
+    }
+</style>
+
         <section class="blog">
             <div class="blog-background">
                 <div class="overlay"></div>

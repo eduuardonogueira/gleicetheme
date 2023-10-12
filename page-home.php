@@ -4,6 +4,12 @@
 
 <?php get_header(); ?>
 
+<style>
+    .menu-lista .menu-item:nth-child(1) a{
+        color: #ffc655;
+    }
+</style>
+
 <section id="inicio" class="inicio">
     <div class="inicio-imagem"></div>
 
