@@ -10,7 +10,7 @@ botaoMenu.addEventListener('click', () => {
  /* Animação para a direita */ 
  const dashright = new IntersectionObserver( entries => {
    Array.from(entries).forEach(entry => { 
-     if (entry.intersectionRatio >= 0.75) { 
+     if (entry.intersectionRatio >= 0.5) { 
      entry.target.classList.add('dash-right') 
      } 
    }) 
@@ -26,7 +26,7 @@ botaoMenu.addEventListener('click', () => {
  /* Animação para a esquerda */ 
  const dashleft = new IntersectionObserver( entries => { 
    Array.from(entries).forEach(entry => { 
-     if (entry.intersectionRatio >= 0.75) { 
+     if (entry.intersectionRatio >= 0.5) { 
      entry.target.classList.add('dash-left') 
      } 
    }) 
@@ -42,7 +42,7 @@ botaoMenu.addEventListener('click', () => {
  /* Animação para cima */ 
  const dashup = new IntersectionObserver( entries => { 
    Array.from(entries).forEach(entry => { 
-     if (entry.intersectionRatio >= 0.75) { 
+     if (entry.intersectionRatio >= 0.5) { 
      entry.target.classList.add('dash-up') 
      } 
    }) 
