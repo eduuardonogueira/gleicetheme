@@ -82,12 +82,14 @@
 
 .blog-post-link {
     background: #EB9B00;
-    padding: 16px;
     border: none;
     width: 100%;
     font-weight: 500;
     > a {
-        color: white;
+        display: flex;
+        justify-content: center;
+        padding: 16px;
+        color: #fff;
         text-decoration: none;
     }
 }
@@ -172,12 +174,14 @@
 .post-recents-button {
     background: #6C3833;
     font-weight: 500;
-    padding: 16px;
     border: none;
     margin: auto;
     height: fit-content;
     width: fit-content;
     > a {
+        display: flex;
+        justify-content: center;
+        padding: 16px;
         text-decoration: none;
         color: #fff;    
     }
